@@ -1,0 +1,38 @@
+﻿@model IEnumerable<MVCApplication.Models.Employee>
+
+<h2>Employee List</h2>
+
+<style>
+    table{
+        width : 100%;
+        table-layout : fixed;
+        border-collapse : collapse;
+    }
+    th{
+        background-color : grey;
+        color : black;
+        font-size : 15px;
+    }
+</style>
+<table>
+    <thead>
+        <tr>
+            <th>EmployeeId</th>
+            <th>EmployeeName</th>
+            <th>EmployeeGender</th>
+            <th>EmployeeLocation</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in Model)
+            {
+                <tr>
+                    <td>@employee.EmployeeId</td>
+                    <td>@employee.EmployeeName</td>
+                    <td>@employee.EmployeeGender</td>
+                    <td>@employee.EmployeeLocation</td>
+                </tr>
+                
+            }
+    </tbody>
+</table>
