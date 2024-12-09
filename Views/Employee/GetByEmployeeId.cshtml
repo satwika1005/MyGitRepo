@@ -1,0 +1,29 @@
+﻿@model MVCApplication.Models.Employee
+
+<h2>Employee Details By Id</h2>
+<style>
+
+    label{
+        width : 20px;
+        padding-left : initial;
+    }
+    input{
+        margin-left : 100px;
+    }
+
+</style>
+
+<label>EmployeeId</label>
+<input type="text" value=" @Model.EmployeeId" /> </br>
+
+<label>EmployeeName</label>
+<input type="text" value=" @Model.EmployeeName" /> </br>
+
+<label>EmployeeGender</label>
+<input type="text" value=" @Model.EmployeeGender" /> </br>
+
+<label>EmployeeLocation</label>
+<input type="text" value=" @Model.EmployeeLocation" /> </br>
+
+@Html.ActionLink("Home", "GetEmployeeList")
+

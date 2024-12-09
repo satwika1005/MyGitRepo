@@ -3,7 +3,7 @@
 <h2>Employee List</h2>
 
 <style>
-    table{
+    /*table{
         width : 100%;
         table-layout : fixed;
         border-collapse : collapse;
@@ -12,9 +12,19 @@
         background-color : grey;
         color : black;
         font-size : 15px;
+    }*/
+    form {
+        margin: 20px;
     }
 </style>
-<table>
+
+<form action="@Url.Action("GetByEmployeeId", "Employee")" method="get">
+    <label for=" employeeId">Enter Employee Id: </label>
+    <input type="number" id="employeeId" name="id" required />
+    <button type="submit">Submit</button>
+
+</form>
+@*<table>
     <thead>
         <tr>
             <th>EmployeeId</th>
@@ -25,14 +35,20 @@
     </thead>
     <tbody>
         @foreach (var employee in Model)
-            {
-                <tr>
-                    <td>@employee.EmployeeId</td>
-                    <td>@employee.EmployeeName</td>
-                    <td>@employee.EmployeeGender</td>
-                    <td>@employee.EmployeeLocation</td>
-                </tr>
-                
-            }
+        {
+            <tr>
+                <td>@employee.EmployeeId</td>
+                <td>@employee.EmployeeName</td>
+                <td>@employee.EmployeeGender</td>
+                <td>@employee.EmployeeLocation</td>
+                <td>@Html.ActionLink("Details", "GetByEmployeeId", new { id = employee.EmployeeId })</td>
+            </tr>
+
+        }
+
+        <
+
+
     </tbody>
 </table>
+*@

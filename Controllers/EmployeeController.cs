@@ -18,7 +18,7 @@ namespace MVCApplication.Controllers
         }
 
         // GetEmployeeById
-        public ActionResult GetById(int id)
+        public ActionResult GetByEmployeeId(int id)
         {
             EmployeeEntities employeeentities = new EmployeeEntities();
             Employee employee = employeeentities.Employees.Find(id);
